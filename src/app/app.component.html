@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 style="font-family: 'Times New Roman', Times, serif;font-size:70px;margin-left: 10%;">Les Rapaces</h2>
+        <p style="font-size:20px;text-align: right;">Mis à jour: {{ lastUpdate | date: 'short' }}</p>
+      <ul class="list-group">
+        <app-posts *ngFor="let posts of article"
+                   [postsName]="posts.title"
+                   [postsContent]="posts.content"
+                   [postsLoveIts]="posts.loveIts"
+                   [postsDate]="posts.createdat">
+                   </app-posts>
+      </ul>
+    </div>
+  </div>
+</div>
